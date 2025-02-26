@@ -1,7 +1,7 @@
 all:
   children:
-    workers:
-      cbr1-worker-network:
+    cbr1-worker-network:
+      hosts:
         worker:
           ansible_host: 192.101.170.52
           ansible_user: ubuntu
@@ -10,7 +10,8 @@ all:
           ansible_host: 192.101.170.55
           ansible_user: ubuntu
           ansible_password: ubuntu
-      cbr2-worker-network:
+    cbr2-worker-network:
+      hosts:
         worker:
           ansible_host: 192.102.170.52
           ansible_user: ubuntu
