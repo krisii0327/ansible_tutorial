@@ -1,0 +1,10 @@
+---
+- name: Create a folder in /tmp
+  hosts: cbr2-worker-network
+  become: yes
+  tasks:
+    - name: Ensure the directory /tmp/my_folder exists
+      file:
+        path: /tmp/my_folder
+        state: directory
+        mode: '0755'  # Set the desired permissions (optional)
