@@ -1,7 +1,7 @@
 ---
 - name: Create a folder in /tmp
   hosts: 
-    - "{{ groups['all']['children']['workers']['cbr2-worker-network'] }}"
+    - cbr2-worker-network
   become: yes
   tasks:
     - name: Ensure the directory /tmp/my_folder exists
