@@ -1,6 +1,6 @@
 ---
 - name: Update apt package manager cache
-  hosts: all
+  hosts: cbr2-worker-network
   become: yes
   tasks:
     - name: Update apt package cache
